@@ -1,0 +1,23 @@
+{
+  "entities": {
+    "Product": {
+      "title": "Product",
+      "description": "A cached product with its ingredients and safety info",
+      "type": "object",
+      "properties": {
+        "barcode": { "type": "string", "description": "The product barcode" },
+        "productName": { "type": "string", "description": "Name of the product" },
+        "ingredients": { "type": "array", "items": { "type": "string" }, "description": "List of ingredients" },
+        "isEdible": { "type": "boolean", "description": "Whether the product is edible" },
+        "lastAnalyzed": { "type": "string", "format": "date-time", "description": "When it was last analyzed by AI" }
+      },
+      "required": ["productName", "isEdible"]
+    }
+  },
+  "firestore": {
+    "/products/{productId}": {
+      "schema": "Product",
+      "description": "Collection of cached products"
+    }
+  }
+}

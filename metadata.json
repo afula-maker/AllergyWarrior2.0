@@ -1,0 +1,8 @@
+{
+  "name": "AllergyWarrior",
+  "description": "A nature-inspired allergy safety app. Scan product labels or search ingredients to instantly check against custom user profiles and allergen groups with a simple red/green safety light.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": []
+}
